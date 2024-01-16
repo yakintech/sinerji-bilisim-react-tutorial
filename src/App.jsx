@@ -1,3 +1,4 @@
+import CartPage from "./state/CartPage"
 import ProductsPage from "./state/ProductsPage"
 import StateArraySample from "./state/StateArraySample"
 import StateIntro from "./state/StateIntro"
@@ -8,7 +9,7 @@ function App() {
 
 
   return <>
-  <ProductsPage/>
+  <CartPage/>
   </>
 }
 

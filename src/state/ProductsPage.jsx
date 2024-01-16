@@ -6,14 +6,14 @@ function ProductsPage() {
     const [favorites, setfavorites] = useState([])
 
     const addToFav = (product) => {
-        
+
         //filter, find
         var productData = favorites.find(item => item.id === product.id)
 
         if (productData) {
             return
         }
-        else{
+        else {
             setfavorites([...favorites, product])
         }
     }
@@ -27,26 +27,33 @@ function ProductsPage() {
 
     return (<>
         <div>
-            <table style={{ borderStyle: 'solid' }}>
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Unit Price</th>
-                        <th>Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        favorites.map(item => <tr>
-                            <td>{item.id}</td>
-                            <td>{item.name}</td>
-                            <td>{item.unitPrice}</td>
-                            <td><button onClick={() => removeFromFav(item)}>Remove</button></td>
-                        </tr>)
-                    }
-                </tbody>
-            </table>
+            <div>
+                <h3>Favorites</h3>
+                <button onClick={() => setfavorites([])}>Remove All</button>
+                <table style={{ borderStyle: 'solid' }}>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Unit Price</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            favorites.map(item => <tr>
+                                <td>{item.id}</td>
+                                <td>{item.name}</td>
+                                <td>{item.unitPrice}</td>
+                                <td><button onClick={() => removeFromFav(item)}>Remove</button></td>
+                            </tr>)
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div>
+
+            </div>
 
             <hr />
 
