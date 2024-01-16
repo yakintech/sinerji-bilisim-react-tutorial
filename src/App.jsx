@@ -1,3 +1,4 @@
+import EffectSample from "./effectSample/EffectSample"
 import CartPage from "./state/CartPage"
 import ProductsPage from "./state/ProductsPage"
 import StateArraySample from "./state/StateArraySample"
@@ -9,7 +10,7 @@ function App() {
 
 
   return <>
-  <CartPage/>
+  <EffectSample/>
   </>
 }
 
