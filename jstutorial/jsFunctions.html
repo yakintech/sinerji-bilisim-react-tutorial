@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    function hello(){
+    }
+
+    const merhaba = function (){
+
+    }
+
+    const merhaba2 = () => {
+
+    }
+
+
+    const cities = ["İzmir", "İstanbul", "Ankara", "Trabzon"]
+
+    
+    cities.forEach(getItem)
+
+    function getItem(item){
+        console.log(item);
+    }
+
+
+    cities.forEach((item) => {
+        console.log(item);
+    })
+
+
+
+    function calc(x,y,z){
+        let result = x + y;
+
+        z(result)
+    }
+
+
+    calc(3,5,function(a){
+        console.log(a);
+    })
+
+
+</script>
+</html>
